@@ -1,0 +1,25 @@
+<div id="divWeatherMain">
+
+  <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
+    <i class="fas fa-3x fa-sun sun "></i>
+  </div>
+
+  <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
+    <i class="fas fa-3x fa-moon moon "></i>
+  </div>
+
+  <div class="weatherWidgetRow cloudDiv">
+    <i class="fas fa-cloud fa-3x cloud"></i>
+  </div>
+  
+<div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData.temp_celcius}}°</div>
+<div class="weatherWidgetRow" style="font-size: 12px;">Daily Low: {{WeatherData.temp_min}}° / Daily High: {{WeatherData.temp_max}}° </div>
+<div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData.temp_feels_like}}°</div>
+<div class="weatherWidgetRow" style="font-size: 25px;">{{WeatherData.name}}</div>
+<div class="weatherWidgetRow" style="font-size: 12px; margin-top: 10px">Humidity: {{WeatherData.main.humidity}}% </div>
+<div class="weatherWidgetRow cityContainer">
+  <div class="weatherWidgetRow cityMain">
+  <img src="assets/images/DallasSkyLine.jpeg" style="height: 150px; width: 150px;">
+</div>
+</div>
+</div>
